@@ -1,0 +1,344 @@
+/*----------------------------------------*\
+  #ROOT
+\*----------------------------------------*/
+
+:root {
+  /**
+     * Colors
+     */
+
+  /* Primary */
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+
+  /* Accent */
+  --Blue: hsl(248, 32%, 49%);
+
+  /* Neutral */
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+
+  /**
+     * Typography
+     */
+
+  /* Body Copy */
+  --Font-size: 16px;
+
+  /* Font Family */
+  --font-family: "Poppins", sans-serif;
+}
+
+/*----------------------------------------*\
+  #RESET
+\*----------------------------------------*/
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img,
+input,
+button {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--Font-size);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--Red);
+  color: white;
+}
+
+::selection {
+  background-color: var(--Green);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--Red);
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--Green);
+  border-radius: 4px;
+}
+
+/*----------------------------------------*\
+  #DUBLICATE ITEM
+\*----------------------------------------*/
+
+.section {
+  padding-block: 70px;
+}
+
+.container {
+  padding-inline: 16px;
+}
+
+.img-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*----------------------------------------*\
+  #COMPONENT
+\*----------------------------------------*/
+
+/**
+ * btn
+ */
+.btn {
+  background-color: var(--Green);
+  border-radius: 6px;
+  color: white;
+  height: 55px;
+  width: 100%;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  box-shadow: 0 6px hsl(154, 95%, 39%);
+  transition: .4s;
+}
+
+.btn:hover {
+  background-color: hsl(154, 65%, 60%);
+  transition: .4s;
+}
+
+/*----------------------------------------*\
+  #background image
+\*----------------------------------------*/
+
+.desktop { 
+  display: none; 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.mobile { 
+  display: block; 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/*----------------------------------------*\
+  #sign up
+\*----------------------------------------*/
+
+.sign-up .container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 50px;
+}
+
+.sign-up .container .sign-up-content {
+  text-align: center;
+  display: grid;
+  gap: 20px;
+}
+
+.sign-up .container .sign-up-content h1 { font-size: 2.1rem; }
+
+.sign-up .container .sign-up-content p { 
+  font-size: 1.1rem; 
+  font-weight: 500;
+  line-height: 1.5;
+  color: #eee;
+}
+
+.sign-up .container .sign-up-form {
+  display: grid;
+  gap: 30px;
+}
+
+.sign-up .container .sign-up-form .sign-up-form-top {
+  background-color: var(--Blue);
+  padding: 15px 35px;
+  text-align: center;
+  line-height: 1.5;
+  border-radius: 10px;
+  position: relative;
+}
+
+.sign-up .container .sign-up-form .sign-up-form-top .shadow {
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  background-color: var(--Dark-Blue);
+  border-radius: 10px;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.sign-up .container .sign-up-form .sign-up-form-top h3 { font-size: 1rem; }
+
+.sign-up .container .sign-up-form .sign-up-form-top h3 span {
+  font-weight: 500;
+  color: var(--Grayish-Blue);
+}
+
+.sign-up .container .sign-up-form .form {
+  display: grid;
+  gap: 20px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  color: var(--Dark-Blue);
+  position: relative;
+}
+
+.sign-up .container .sign-up-form .form .shadow {
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  background-color: var(--Dark-Blue);
+  border-radius: 10px;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.sign-up .container .sign-up-form .form .input-box { position: relative; }
+
+.sign-up .container .sign-up-form .form .input-box .item {
+  border: 2px solid #e1e1e1;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: .4s;
+}
+
+.sign-up .container .sign-up-form .form .input-box .item:focus {
+  border: 2px solid var(--Dark-Blue);
+  transition: .4s;
+}
+
+.sign-up .container .sign-up-form .form .input-box .item.active {
+  border: 2px solid var(--Red);
+  transition: .4s;
+}
+
+.sign-up .container .sign-up-form .form .input-box .icon-error {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  right: 12px;
+  bottom: 43%;
+  display: none;
+}
+
+.sign-up .container .sign-up-form .form .input-box .icon-error.active { display: block; }
+
+.sign-up .container .sign-up-form .form .input-box .text-error {
+  color: var(--Red);
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  display: none;
+}
+
+.sign-up .container .sign-up-form .form .input-box .text-error.active { display: flex; }
+
+.sign-up .container .sign-up-form .form .text-link {
+  color: var(--Grayish-Blue);
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.sign-up .container .sign-up-form .form .text-link .link { 
+  color: var(--Red); 
+  font-weight: 600;
+}
+
+/*----------------------------------------*\
+  #MEDIA
+\*----------------------------------------*/
+
+@media (min-width: 1200px) {
+  /* #DUBLICATE ITEM */
+  .section { padding-block: 0px; }
+  
+  .container { padding-inline: 10%; }
+
+  /* #background image */
+  .desktop { display: block; }
+
+  .mobile { display: none; }
+
+  /* #sign up */
+  .sign-up .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    gap: 25px;
+  }
+  .sign-up .container .sign-up-content { text-align: left; }
+
+  .sign-up .container .sign-up-content h1 { font-size: 3.3rem; }
+
+  .sign-up .container .sign-up-form { 
+    width: 550px;
+    gap: 20px; 
+  }
+
+  .sign-up .container .sign-up-form .sign-up-form-top { padding: 20px 35px; }
+
+  .sign-up .container .sign-up-form .form { padding: 40px; }
+
+  .sign-up .container .sign-up-form .form .input-box .item { padding: 20px 30px; }
+}
